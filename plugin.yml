@@ -1,0 +1,5 @@
+version: 1.0
+name: Dragon
+main: com.mathmaniarobotics.plugin.Main
+author: Cheri Haggard
+description: 

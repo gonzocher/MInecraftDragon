@@ -1,0 +1,9 @@
+version: 1.0
+name: HelloPlugin
+main: com.mathmaniarobotics.plugin.Main
+author: Cheri Haggard
+description: Finest test plugin available!
+commands:
+  hello:
+    aliases: [hiyo, hallo]
+    description: Good test command

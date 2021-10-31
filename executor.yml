@@ -1,0 +1,7 @@
+version: 1.0
+name: RyanInControlPlugin
+main: com.mathmaniarobotics.plugin.Main
+author: Cheri Haggard
+description: Cancels movement and enables glow for all players on entry.
+commands:
+  heal:

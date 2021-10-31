@@ -1,0 +1,7 @@
+version: 1.0
+name: JackLevitatesPlugin
+main: com.mathmaniarobotics.plugin.Main
+author: Cheri Haggard
+description: Holding an object will cause player to levitate
+commands:
+  levitate:

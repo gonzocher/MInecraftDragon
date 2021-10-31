@@ -1,0 +1,62 @@
+//This is code for Ryan to cancel movement & glow of all players on entry, command to enable movement by player name, to replace Main.java
+
+package com.mathmaniarobotics.plugin;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerEggThrowEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import net.md_5.bungee.api.ChatColor;
+
+public class Main extends JavaPlugin implements Listener {
+
+	@Override
+	public void onEnable() {
+		System.out.println("Ryan in Control Enabled");
+		Bukkit.getPluginManager().registerEvents(this, this);
+	}
+	
+	//Will this work?
+	@Override
+	public void onDisable() {
+		System.out.println("Ryan in Control Disabled");
+		//Player player = e.getPlayer();
+		//player.setGlowing(false);
+	}
+	
+	@EventHandler
+	public void onMove(PlayerMoveEvent e) {
+		
+		e.setCancelled(true);
+		Player player = e.getPlayer();
+		player.setGlowing(true);
+		
+	}
+
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		
+		//add command to yml
+		
+		if (cmd.getName().equals("release")) {
+			if (sender instanceof Player) {
+				Player player = (Player) sender;
+				
+				player.setGlowing(false);
+				player.sendMessage(ChatColor.GRAY + "Hello, " + ChatColor.GREEN + player.getName() + ChatColor.GRAY + "You're wish is my command.  Whom would you like to release from their imprisonment?");
+				
+			} else {
+				System.out.println("You cannot use this command through console!");
+			}
+		}
+		
+		return false;
+	}
+	
+}	

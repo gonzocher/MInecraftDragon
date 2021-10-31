@@ -1,0 +1,7 @@
+version: 1.0
+name: RyanReleasePlugin
+main: com.mathmaniarobotics.plugin.Main
+author: Cheri Haggard
+description: Will freeze and glow all players on entry. Can be released on command.
+commands:
+  release:

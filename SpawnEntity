@@ -1,0 +1,18 @@
+// How to work with Entities
+
+package com.mathmaniarobotics.plugin;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.entity.EntityType;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	
+	@Override
+	public void onEnable() {
+		Bukkit.getWorld("world").spawnEntity(new Location(Bukkit.getWorld("world"), 102, 71, -12), EntityType.ARMOR_STAND);
+		
+	
+	}
+}

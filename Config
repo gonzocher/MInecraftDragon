@@ -1,0 +1,41 @@
+//This is code for Config, to replace Main.java
+
+package com.mathmaniarobotics.plugin;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import net.md_5.bungee.api.ChatColor;
+
+
+public class Main extends JavaPlugin implements Listener {
+
+	@Override
+	public void onEnable() {
+		System.out.println("CONFIG ENABLED!");
+		
+		getConfig().options().copyDefaults();
+		saveDefaultConfig();
+		
+		Bukkit.getPluginManager().registerEvents(this, this);
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		
+		Player player = (Player) sender;
+		
+		if (cmd.getName().equals("config")) {
+			String word = getConfig().getString("Word");
+			int number = getConfig().getInt("Number");
+			
+			player.sendMessage(ChatColor.GRAY + "The word is " + ChatColor.GREEN + word + ChatColor.GRAY + " and the number is " + ChatColor.GREEN + number + ChatColor.GRAY + ".");
+		}
+
+		return false;
+	}
+	
+}	

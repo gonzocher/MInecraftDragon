@@ -1,0 +1,14 @@
+//This is code for FirstPlugin, to replace Main.java
+
+package com.mathmaniarobotics.plugin;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	
+	@Override
+	public void onEnable() {
+		System.out.println("The plugin has worked!");
+	}
+	
+}
