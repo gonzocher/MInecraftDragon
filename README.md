@@ -6,6 +6,15 @@ The ultimate goal is to have the EnderDragon drop 5 dragon scales when killed.  
 
 Successful changes so far:
 on enable plugin, make players glow and unable to move
+make armorstand appear at specified location
+and armorstand appears invisible
+
 command to restore health
+
 onSneak, glow
 onSneak, send up fireworks
+
+on kill chicken, make golden apple appear at kill location
+make armorstand appear at specified location
+make 5 golden apples appear at specified location
+
